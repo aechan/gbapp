@@ -2,13 +2,13 @@
 
 Gameboy Advanced emulator implemented in C++
 
-Currently working on implementing the z80 CPU and instruction set.
+Currently working on the simulated MMU (Memory Management Unit) in order to finish the implementation of all of the z80's instructions.
 
 Will use SDL as for input and to create the OpenGL context.
 
 ## Planned phases
-1. CPU
-2. Memory
+1. CPU - in progress
+2. Memory - in progress
 3. GPU Timings
 4. Graphics
 5. Integration
