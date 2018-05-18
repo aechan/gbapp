@@ -36,3 +36,21 @@ void z80::NOP() {
     this->_r.m = 1;
     this->_r.t = 4;
 }
+
+/**
+ * resets the cpu back to the start of execution
+ **/
+void z80::reset() {
+    this->_r.a = 0;
+    this->_r.b = 0;
+    this->_r.c = 0;
+    this->_r.d = 0;
+    this->_r.e = 0;
+    this->_r.h = 0;
+    this->_r.l = 0;
+    this->_r.f = 0;
+    this->_r.pc = 0;
+    this->_r.sp = 0;
+    this->_c.m = 0;
+    this->_c.t = 0;
+}

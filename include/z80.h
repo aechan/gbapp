@@ -37,4 +37,5 @@ public:
     void addr_e();  // add registr E to A leave result in A (ADD A, E)
     void cmpr_b();  // compare B to A, set flags (CP A, B)
     void NOP();     // NOP - no operation
+    void reset();   // resets cpu for startup
 };
