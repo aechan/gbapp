@@ -14,6 +14,14 @@ typedef struct registers {
     unsigned char e;
     unsigned char h; 
     unsigned char l;
+
+    /**
+     * !!Notes on FLAG!!
+     * 0x80 - last op produced result of 0
+     * 0x40 - last op was a subtraction
+     * 0x20 - if last op result the lower half of the byte overflowed past 15
+     * 0x10 - if last op was greater than 255 of less than 0 (if subtraction)
+     **/
     unsigned char f;
 
     /**
