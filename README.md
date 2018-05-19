@@ -6,7 +6,7 @@ First, all the original gameboy's hardware will be emulated since it's a simpler
 
 Currently working on the simulated MMU (Memory Management Unit) in order to finish the implementation of all of the z80's instructions.
 
-Will use SDL as for input and to create the OpenGL context.
+Will use SDL for cross platform input, audio and to create the OpenGL context.
 
 ## Planned phases
 1. CPU - in progress
