@@ -1,4 +1,4 @@
-# GBA++
+# GBA++🕹️
 
 Gameboy Advanced emulator implemented in C++17
 
