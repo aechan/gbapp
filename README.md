@@ -1,6 +1,6 @@
 # GBA++
 
-Gameboy Advanced emulator implemented in C++
+Gameboy Advanced emulator implemented in C++17
 
 Currently working on the simulated MMU (Memory Management Unit) in order to finish the implementation of all of the z80's instructions.
 
