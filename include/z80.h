@@ -1,7 +1,7 @@
 typedef struct clock {
     int t;
     int m;
-} clock;
+} zclock;
 
 typedef struct registers {
     /**
