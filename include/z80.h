@@ -32,7 +32,7 @@ typedef struct registers {
 
 class z80 {
 public:
-    clock _c;
+    zclock _c;
     registers _r;
     void addr_e();  // add registr E to A leave result in A (ADD A, E)
     void cmpr_b();  // compare B to A, set flags (CP A, B)
