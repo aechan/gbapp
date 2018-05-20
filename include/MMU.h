@@ -16,6 +16,9 @@ public:
     MMU();
     ~MMU();
 private:
-    std::map<int, unsigned char>* bytes;
-    std::map<int, unsigned short int>* words;
+    std::map<int, unsigned char>* bios;
+    std::map<int, unsigned char>* rom;
+    std::map<int, unsigned char>* wram;
+    std::map<int, unsigned char>* eram;
+    std::map<int, unsigned char>* zram;
 };
