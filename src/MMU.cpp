@@ -1,13 +1,16 @@
 #include "MMU.h"
 
+// initialize data structs and set bios mode
 MMU::MMU() {
     bios = new std::map<int, unsigned char>();
     rom = new std::map<int, unsigned char>();
     wram = new std::map<int, unsigned char>();
     eram = new std::map<int, unsigned char>();
     zram = new std::map<int, unsigned char>();
+    inbios = true;
 }
 
+// delete all memory
 MMU::~MMU() {
     delete bios;
     delete rom;

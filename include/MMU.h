@@ -21,4 +21,6 @@ private:
     std::map<int, unsigned char>* wram;
     std::map<int, unsigned char>* eram;
     std::map<int, unsigned char>* zram;
+
+    bool inbios;
 };
