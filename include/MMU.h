@@ -24,6 +24,6 @@ private:
     std::map<uint16_t, uint8_t>* wram;
     std::map<uint16_t, uint8_t>* eram;
     std::map<uint16_t, uint8_t>* zram;
-
+    z80* cpu;
     bool inbios;
 };
