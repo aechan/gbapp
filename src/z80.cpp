@@ -1,3 +1,4 @@
+#pragma once
 #include "z80.h"
 #include "MMU.h"
 /**
@@ -19,7 +20,7 @@ void z80::addr_e() {
  * Compare register B to A, and set flag
  **/
 void z80::cmpr_b() {
-    unsigned char temp_a = this->_r.a;
+    uint8_t temp_a = this->_r.a;
     temp_a -= this->_r.b;
     this->_r.f |= 0x40; // set the subtraction flag
     if(!(temp_a & 255)) this->_r.f |= 0x80;

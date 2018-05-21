@@ -1,19 +1,19 @@
 typedef struct clock {
-    int t;
-    int m;
+    uint8_t t;
+    uint8_t m;
 } zclock;
 
 typedef struct registers {
     /**
      * 8 bit regs
      **/
-    unsigned char a;
-    unsigned char b;
-    unsigned char c;
-    unsigned char d;
-    unsigned char e;
-    unsigned char h; 
-    unsigned char l;
+    uint8_t a;
+    uint8_t b;
+    uint8_t c;
+    uint8_t d;
+    uint8_t e;
+    uint8_t h; 
+    uint8_t l;
 
     /**
      * !!Notes on FLAG!!
@@ -22,19 +22,19 @@ typedef struct registers {
      * 0x20 - if last op result the lower half of the byte overflowed past 15
      * 0x10 - if last op was greater than 255 of less than 0 (if subtraction)
      **/
-    unsigned char f;
+    uint8_t f;
 
     /**
      * 16 bit regs
      **/
-    unsigned short int pc;
-    unsigned short int sp;
+    uint16_t pc;
+    uint16_t sp;
 
     /**
      * clock for last instr set
      **/
-    int m;
-    int t;
+    uint8_t m;
+    uint8_t t;
 
 } registers;
 

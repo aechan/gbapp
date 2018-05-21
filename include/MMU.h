@@ -1,26 +1,27 @@
 #include <map>
+#include <stdint.h>
 
 class MMU {
 public:
     // read byte
-    unsigned char rb(int addr);
+    uint8_t rb(uint16_t addr);
     // read word
-    unsigned short int rw(int addr);
+    uint16_t rw(uint16_t addr);
 
     // write byte
-    void wb(int addr, unsigned char val);
-
+    void wb(uint16_t addr, uint8_t val);
     // write word
-    void ww(int addr, unsigned short int val);
+    void ww(uint16_t addr, uint16_t val);
 
+    // ctor/dtor
     MMU();
     ~MMU();
 private:
-    std::map<int, unsigned char>* bios;
-    std::map<int, unsigned char>* rom;
-    std::map<int, unsigned char>* wram;
-    std::map<int, unsigned char>* eram;
-    std::map<int, unsigned char>* zram;
+    std::map<uint16_t, uint8_t>* bios;
+    std::map<uint16_t, uint8_t>* rom;
+    std::map<uint16_t, uint8_t>* wram;
+    std::map<uint16_t, uint8_t>* eram;
+    std::map<uint16_t, uint8_t>* zram;
 
     bool inbios;
 };
