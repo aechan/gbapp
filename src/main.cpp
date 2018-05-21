@@ -1,4 +1,3 @@
-#pragma once
 #include "z80.h"
 
 int main() {

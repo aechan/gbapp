@@ -1,3 +1,6 @@
+#pragma once
+#include <stdint.h>
+
 typedef struct clock {
     uint8_t t;
     uint8_t m;
