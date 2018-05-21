@@ -134,6 +134,10 @@ public:
      * Data processors
      **/ 
     void cmpr_b();  // compare B to A, set flags (CP A, B)
+    void addr_b();
+    void addr_c();
+    void addr_d();
     void addr_e();  // add registr E to A leave result in A (ADD A, E)
-
+    void addr_h();
+    void addr_l();
 };

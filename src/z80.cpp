@@ -1,11 +1,88 @@
 #include "z80.h"
 #include "MMU.h"
+
+/**
+ * Add B to A
+ **/
+void z80::addr_b() {
+    // add b to a
+    this->_r.a += this->_r.b;
+    // clear flags
+    this->_r.f = 0;
+    if(!(this->_r.a & 255)) this->_r.f |= 0x80; // check 0
+    if(this->_r.a > 255) this->_r.f |= 0x10;    // check carry
+    this->_r.a &= 255;
+    this->_r.m = 1;
+    this->_r.t = 4; 
+}
+
+/**
+ * Add C to A
+ **/
+void z80::addr_c() {
+    // add c to a
+    this->_r.a += this->_r.c;
+    // clear flags
+    this->_r.f = 0;
+    if(!(this->_r.a & 255)) this->_r.f |= 0x80; // check 0
+    if(this->_r.a > 255) this->_r.f |= 0x10;    // check carry
+    this->_r.a &= 255;
+    this->_r.m = 1;
+    this->_r.t = 4; 
+}
+
+/**
+ * Add D to A
+ **/
+void z80::addr_d() {
+    // add d to a
+    this->_r.a += this->_r.d;
+    // clear flags
+    this->_r.f = 0;
+    if(!(this->_r.a & 255)) this->_r.f |= 0x80; // check 0
+    if(this->_r.a > 255) this->_r.f |= 0x10;    // check carry
+    this->_r.a &= 255;
+    this->_r.m = 1;
+    this->_r.t = 4; 
+}
+
 /**
  * Add E to A
  **/
 void z80::addr_e() {
     // add e to a
     this->_r.a += this->_r.e;
+    // clear flags
+    this->_r.f = 0;
+    if(!(this->_r.a & 255)) this->_r.f |= 0x80; // check 0
+    if(this->_r.a > 255) this->_r.f |= 0x10;    // check carry
+    this->_r.a &= 255;
+    this->_r.m = 1;
+    this->_r.t = 4; 
+}
+
+/**
+ * Add H to A
+ **/
+void z80::addr_h() {
+    // add h to a
+    this->_r.a += this->_r.h;
+    // clear flags
+    this->_r.f = 0;
+    if(!(this->_r.a & 255)) this->_r.f |= 0x80; // check 0
+    if(this->_r.a > 255) this->_r.f |= 0x10;    // check carry
+    this->_r.a &= 255;
+    this->_r.m = 1;
+    this->_r.t = 4; 
+}
+
+
+/**
+ * Add L to A
+ **/
+void z80::addr_l() {
+    // add l to a
+    this->_r.a += this->_r.l;
     // clear flags
     this->_r.f = 0;
     if(!(this->_r.a & 255)) this->_r.f |= 0x80; // check 0

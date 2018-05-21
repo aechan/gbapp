@@ -1,6 +1,7 @@
 #pragma once
 #include <map>
 #include <stdint.h>
+#include "z80.h"
 
 class MMU {
 public:
@@ -15,7 +16,7 @@ public:
     void ww(uint16_t addr, uint16_t val);
 
     // ctor/dtor
-    MMU();
+    MMU(z80* cpu);
     ~MMU();
 private:
     std::map<uint16_t, uint8_t>* bios;
